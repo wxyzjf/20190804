@@ -1,0 +1,41 @@
+
+
+
+
+
+If (len(trim(Input.file_time)) < 1) Then iconv("01/01/1900","D4/DMY[2,2,4]") Else iconv((trim(Input.DateTime[1,10])), "D4/DMY[2,2,4]") 
+
+
+
+StringToTimestamp((DateToString(in.ADD_DATE,"%yyyy-%mm-%dd"):' 00:00:00'), "%yyyy-%mm-%dd %hh:%nn:%ss")
+
+
+
+
+TimestampToDate(Input.file_time)
+
+If Len(Trim(Input.file_time))>= 1  Then  StringToDate(Trim(Input.file_time), "%yyyy-%mm-%dd" ) Else StringToDate("1900-01-01")
+If Len(Trim(Input.file_time))>= 1  Then  StringToDate(Trim(Input.file_time), "%yyyy/%mm/%dd" ) Else StringToDate("1900/01/01")
+
+If Len(Trim(Input.file_time))>= 1  Then  StringToTimestamp(Trim(Input.file_time), "%yyyy/%mm/%dd %hh:%nn:%ss" ) Else StringToTimestamp("1900/01/01 00:00:00")
+
+If Len(Trim(Input.file_time))>= 1  Then  StringToTimestamp(Trim(Input.file_time), "%yyyy/%(m,s)/%(d,s)%(h,s):$(n,s):$(s,s)" ) Else StringToTimestamp("1900/01/01 00:00:00")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

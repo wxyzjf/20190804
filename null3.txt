@@ -1,0 +1,5 @@
+iconv((if(len(Trim(DSLink3.two)) < 1) then " " else Trim(DSLink3.two)),"D4-YMD[4,2,2]")
+
+
+
+alter table bp.datastage_test add timestamp DATE DEFAULT TO_DATE('29991231000000','YYYYMMDDHH24MISS') NOT NULL,
