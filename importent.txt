@@ -1,0 +1,18 @@
+***OCONV(Substrings(Input.file_time,1,10), "D4/YMD[4,2,2]") :" ":OCONV(Substrings(Input.file_time,12,8), "MTS:") 
+
+
+
+***OCONV(Substrings(Input.timestamp,1,4):"-":Substrings(Input.timestamp,5,2):"-":Substrings(Input.timestamp,7,2),"D4-YMD[4,2,2]"):" ":OCONV(Substrings(Input.timestamp,9,2):":":Substrings(Input.timestamp,11,2):":":Substrings(Input.timestamp,13,2), "MTS:")
+
+
+
+
+iconv(OCONV(Substrings(Input.file_time,1,10), "D4/YMD[4,2,2]"),"D4/YMD[4,2,2]"):" ":iconv(OCONV(Substrings(Input.file_time,12,8), "MTS:")
+iconv(OCONV(Substrings(Input.file_time,1,10), "D4/YMD[4,2,2]") :" ":OCONV(Substrings(Input.file_time,12,8), "MTS:"),"D4/YMD[4,2,2] MTS:")
+
+
+iconv(OCONV(Substrings(Input.timestamp,1,4):"-":Substrings(Input.timestamp,5,2):"-":Substrings(Input.timestamp,7,2),"D4-YMD[4,2,2]"),"D4-YMD[4,2,2]"):" ":iconv(OCONV(Substrings(Input.timestamp,9,2):":":Substrings(Input.timestamp,11,2):":":Substrings(Input.timestamp,13,2), "MTS:"),"MTS:")
+iconv(OCONV(Substrings(Input.timestamp,1,4):"-":Substrings(Input.timestamp,5,2):"-":Substrings(Input.timestamp,7,2),"D4-YMD[4,2,2]"):" ":OCONV(Substrings(Input.timestamp,9,2):":":Substrings(Input.timestamp,11,2):":":Substrings(Input.timestamp,13,2), "MTS:"),"D4/YMD[4,2,2] MTS:")
+
+
+
